@@ -36,7 +36,7 @@
       "projectType": "application",
       "root": "apps/loan",
       "sourceRoot": "apps/loan/src",
-      "prefix": "mode-loan",
+      "prefix": "mode",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:webpack-browser",
@@ -103,7 +103,7 @@
           },
           "defaultConfiguration": "development",
           "options": {
-            "port": 5001
+            "port": 5002
           }
         },
         "extract-i18n": {
@@ -292,7 +292,7 @@
       "projectType": "application",
       "root": "apps/user",
       "sourceRoot": "apps/user/src",
-      "prefix": "mode-user",
+      "prefix": "user",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:webpack-browser",

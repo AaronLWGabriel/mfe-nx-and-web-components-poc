@@ -26,16 +26,16 @@ module.exports = {
 
         // For hosts (please adjust)
         remotes: {
-            "marketing": "marketing@http://localhost:5002/remoteEntry.js",
-            "loanApp": "loanApp@http://localhost:5001/remoteEntry.js",
+            "marketing": "marketing@http://localhost:5001/remoteEntry.js",
+            "loanApp": "loanApp@http://localhost:5002/remoteEntry.js",
             "userApp": "userApp@http://localhost:5003/remoteEntry.js",
         },
 
         shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/core": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "@angular/common": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "@angular/common/http": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "@angular/router": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
 
           ...sharedMappings.getDescriptors()
         })

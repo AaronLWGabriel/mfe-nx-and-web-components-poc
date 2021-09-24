@@ -1,51 +1,46 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-// const mf = require("@angular-architects/module-federation/webpack");
-// const path = require("path");
-// const share = mf.share;
+const mf = require("@angular-architects/module-federation/webpack");
+const path = require("path");
+const share = mf.share;
 
-// const sharedMappings = new mf.SharedMappings();
-// sharedMappings.register(
-//   path.join(__dirname, 'tsconfig.json'),
-//   [/* mapped paths to share */]);
+const sharedMappings = new mf.SharedMappings();
+sharedMappings.register(
+  path.join(__dirname, 'tsconfig.json'),
+  [/* mapped paths to share */]);
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:5002/",
-    uniqueName: "marketing"
+    uniqueName: "marketing",
+    publicPath: "auto"
   },
   optimization: {
     runtimeChunk: false
   },
-  // resolve: {
-  //   alias: {
-  //     ...sharedMappings.getAliases(),
-  //   }
-  // },
+  resolve: {
+    alias: {
+      ...sharedMappings.getAliases(),
+    }
+  },
   plugins: [
     new ModuleFederationPlugin({
 
         // For remotes (please adjust)
         name: "marketing",
-        library: { type: "var", name: "marketing" },
         filename: "remoteEntry.js",
         exposes: {
-          //  './Component': './/src/app/app.component.ts',
-          './web-components': './src/bootstrap.ts', // bootstrap --> main --> AppModule --> WebComp
+            './web-components': './src/bootstrap.ts', // bootstrap --> main --> AppModule --> WebComp
         },
 
-        // shared: share({
-        //   "@angular/core": { singleton: true, strictVersion: true, requiredVersion: '>=12.0.0' },
-        //   "@angular/common": { singleton: true, strictVersion: true, requiredVersion: '>=12.0.0' },
-        //   "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: '>=12.0.0' },
-        //   "@angular/router": { singleton: true, strictVersion: true, requiredVersion: '>=12.0.0' },
+        shared: share({
+          "@angular/core": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "@angular/common": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "@angular/common/http": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "@angular/router": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
 
-        //   ...sharedMappings.getDescriptors()
-        // })
-
-        shared: ["@angular/core", "@angular/common", "@angular/router"]
-
+          ...sharedMappings.getDescriptors()
+        })
 
     }),
-    // sharedMappings.getPlugin()
+    sharedMappings.getPlugin()
   ],
 };

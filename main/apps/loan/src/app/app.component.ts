@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'loan-root',
+  selector: 'mode-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
