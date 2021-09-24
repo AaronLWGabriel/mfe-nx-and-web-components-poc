@@ -33,12 +33,6 @@ module.exports = {
           './web-components': './src/bootstrap.ts', // bootstrap --> main --> AppModule --> WebComp
         },
 
-        // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
-
-        // },
-
         // shared: share({
         //   "@angular/core": { singleton: true, strictVersion: true, requiredVersion: '>=12.0.0' },
         //   "@angular/common": { singleton: true, strictVersion: true, requiredVersion: '>=12.0.0' },

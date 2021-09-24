@@ -10,11 +10,8 @@
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
-  "resolutions": {
-    "webpack": "^5.0.0"
-  },
   "dependencies": {
-    "@angular-architects/module-federation": "^12.2.1",
+    "@angular-architects/module-federation": "^12.5.2",
     "@angular/animations": "~12.1.1",
     "@angular/common": "~12.1.1",
     "@angular/compiler": "~12.1.1",

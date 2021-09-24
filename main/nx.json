@@ -19,12 +19,12 @@
     }
   },
   "projects": {
-    "app-one": {
+    "loan": {
       "tags": []
     },
-    "app-one-e2e": {
+    "loan-e2e": {
       "tags": [],
-      "implicitDependencies": ["app-one"]
+      "implicitDependencies": ["loan"]
     },
     "shell": {
       "tags": []
@@ -32,6 +32,13 @@
     "shell-e2e": {
       "tags": [],
       "implicitDependencies": ["shell"]
+    },
+    "user": {
+      "tags": []
+    },
+    "user-e2e": {
+      "tags": [],
+      "implicitDependencies": ["user"]
     }
   }
 }

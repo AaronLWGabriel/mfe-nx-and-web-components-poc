@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@appOne/*": ["apps/app-one/src/app/*"]
+      "@appOne/*": ["apps/loan/src/app/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
