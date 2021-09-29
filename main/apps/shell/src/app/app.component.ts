@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare const require: any;
 
 @Component({
   selector: 'mode-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'shell';
+  public readonly title = 'shell';
+
+  ngVersion = require('../../../../package.json').dependencies['@angular/core'];
 }
