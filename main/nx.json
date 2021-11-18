@@ -18,33 +18,35 @@
       }
     }
   },
-  "projects": {
-    "loan": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "shell",
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
     },
-    "loan-e2e": {
-      "tags": [],
-      "implicitDependencies": ["loan"]
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
     },
-    "mylibrary1": {
-      "tags": []
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
     },
-    "mylibrary2": {
-      "tags": []
-    },
-    "shell": {
-      "tags": []
-    },
-    "shell-e2e": {
-      "tags": [],
-      "implicitDependencies": ["shell"]
-    },
-    "user": {
-      "tags": []
-    },
-    "user-e2e": {
-      "tags": [],
-      "implicitDependencies": ["user"]
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   }
 }
