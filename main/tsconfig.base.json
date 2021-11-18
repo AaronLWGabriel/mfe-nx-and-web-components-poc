@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@appOne/*": ["apps/loan/src/app/*"]
+      "@appOne/*": ["apps/loan/src/app/*"],
+      "@mode/mylibrary1": ["libs/mylibrary1/src/index.ts"],
+      "@mode/mylibrary2": ["libs/mylibrary2/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

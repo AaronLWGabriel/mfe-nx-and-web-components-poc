@@ -26,6 +26,12 @@
       "tags": [],
       "implicitDependencies": ["loan"]
     },
+    "mylibrary1": {
+      "tags": []
+    },
+    "mylibrary2": {
+      "tags": []
+    },
     "shell": {
       "tags": []
     },
