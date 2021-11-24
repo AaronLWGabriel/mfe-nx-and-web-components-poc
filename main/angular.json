@@ -16,8 +16,13 @@
             "polyfills": "apps/loan/src/polyfills.ts",
             "tsConfig": "apps/loan/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/loan/src/favicon.ico", "apps/loan/src/assets"],
-            "styles": ["apps/loan/src/styles.scss"],
+            "assets": [
+              "apps/loan/src/favicon.ico",
+              "apps/loan/src/assets"
+            ],
+            "styles": [
+              "apps/loan/src/styles.scss"
+            ],
             "scripts": [],
             "commonChunk": false,
             "customWebpackConfig": {
@@ -90,11 +95,15 @@
               "apps/loan/src/**/*.html"
             ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/loan"],
+          "outputs": [
+            "coverage/apps/loan"
+          ],
           "options": {
             "jestConfig": "apps/loan/jest.config.js",
             "passWithNoTests": true
@@ -124,13 +133,19 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/loan-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/loan-e2e/**/*.{js,ts}"
+            ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         }
       },
       "tags": [],
-      "implicitDependencies": ["loan"]
+      "implicitDependencies": [
+        "loan"
+      ]
     },
     "mylibrary1": {
       "projectType": "library",
@@ -140,7 +155,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/mylibrary1"],
+          "outputs": [
+            "coverage/libs/mylibrary1"
+          ],
           "options": {
             "jestConfig": "libs/mylibrary1/jest.config.js",
             "passWithNoTests": true
@@ -166,7 +183,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/mylibrary2"],
+          "outputs": [
+            "coverage/libs/mylibrary2"
+          ],
           "options": {
             "jestConfig": "libs/mylibrary2/jest.config.js",
             "passWithNoTests": true
@@ -199,8 +218,13 @@
             "polyfills": "apps/shell/src/polyfills.ts",
             "tsConfig": "apps/shell/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
-            "styles": ["apps/shell/src/styles.scss"],
+            "assets": [
+              "apps/shell/src/favicon.ico",
+              "apps/shell/src/assets"
+            ],
+            "styles": [
+              "apps/shell/src/styles.scss"
+            ],
             "scripts": [],
             "commonChunk": false,
             "customWebpackConfig": {
@@ -273,11 +297,15 @@
               "apps/shell/src/**/*.html"
             ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/shell"],
+          "outputs": [
+            "coverage/apps/shell"
+          ],
           "options": {
             "jestConfig": "apps/shell/jest.config.js",
             "passWithNoTests": true
@@ -307,13 +335,19 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/shell-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/shell-e2e/**/*.{js,ts}"
+            ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         }
       },
       "tags": [],
-      "implicitDependencies": ["shell"]
+      "implicitDependencies": [
+        "shell"
+      ]
     },
     "user": {
       "projectType": "application",
@@ -323,7 +357,9 @@
       "architect": {
         "build": {
           "builder": "@nrwl/angular:webpack-browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/user",
             "index": "apps/user/src/index.html",
@@ -331,8 +367,13 @@
             "polyfills": "apps/user/src/polyfills.ts",
             "tsConfig": "apps/user/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/user/src/favicon.ico", "apps/user/src/assets"],
-            "styles": ["apps/user/src/styles.scss"],
+            "assets": [
+              "apps/user/src/favicon.ico",
+              "apps/user/src/assets"
+            ],
+            "styles": [
+              "apps/user/src/styles.scss"
+            ],
             "scripts": [],
             "customWebpackConfig": {
               "path": "apps/user/webpack.config.js"
@@ -408,7 +449,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/user"],
+          "outputs": [
+            "coverage/apps/user"
+          ],
           "options": {
             "jestConfig": "apps/user/jest.config.js",
             "passWithNoTests": true
@@ -436,14 +479,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/user-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/user-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["user"]
+      "implicitDependencies": [
+        "user"
+      ]
     }
   }
 }
