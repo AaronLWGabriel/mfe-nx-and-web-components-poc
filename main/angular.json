@@ -1,36 +1,5 @@
 {
   "version": 1,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "defaultProject": "shell",
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
   "projects": {
     "loan": {
       "projectType": "application",
@@ -47,8 +16,13 @@
             "polyfills": "apps/loan/src/polyfills.ts",
             "tsConfig": "apps/loan/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/loan/src/favicon.ico", "apps/loan/src/assets"],
-            "styles": ["apps/loan/src/styles.scss"],
+            "assets": [
+              "apps/loan/src/favicon.ico",
+              "apps/loan/src/assets"
+            ],
+            "styles": [
+              "apps/loan/src/styles.scss"
+            ],
             "scripts": [],
             "commonChunk": false,
             "customWebpackConfig": {
@@ -121,17 +95,22 @@
               "apps/loan/src/**/*.html"
             ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/loan"],
+          "outputs": [
+            "coverage/apps/loan"
+          ],
           "options": {
             "jestConfig": "apps/loan/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "loan-e2e": {
       "root": "apps/loan-e2e",
@@ -154,11 +133,19 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/loan-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/loan-e2e/**/*.{js,ts}"
+            ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": [
+        "loan"
+      ]
     },
     "shell": {
       "projectType": "application",
@@ -175,8 +162,13 @@
             "polyfills": "apps/shell/src/polyfills.ts",
             "tsConfig": "apps/shell/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
-            "styles": ["apps/shell/src/styles.scss"],
+            "assets": [
+              "apps/shell/src/favicon.ico",
+              "apps/shell/src/assets"
+            ],
+            "styles": [
+              "apps/shell/src/styles.scss"
+            ],
             "scripts": [],
             "commonChunk": false,
             "customWebpackConfig": {
@@ -249,17 +241,22 @@
               "apps/shell/src/**/*.html"
             ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         },
         "test": {
           "builder": "ngx-build-plus:karma",
-          "outputs": ["coverage/apps/shell"],
+          "outputs": [
+            "coverage/apps/shell"
+          ],
           "options": {
             "jestConfig": "apps/shell/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "shell-e2e": {
       "root": "apps/shell-e2e",
@@ -282,11 +279,19 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/shell-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/shell-e2e/**/*.{js,ts}"
+            ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": [
+        "shell"
+      ]
     },
     "user": {
       "projectType": "application",
@@ -296,7 +301,9 @@
       "architect": {
         "build": {
           "builder": "@nrwl/angular:webpack-browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/user",
             "index": "apps/user/src/index.html",
@@ -304,8 +311,13 @@
             "polyfills": "apps/user/src/polyfills.ts",
             "tsConfig": "apps/user/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/user/src/favicon.ico", "apps/user/src/assets"],
-            "styles": ["apps/user/src/styles.scss"],
+            "assets": [
+              "apps/user/src/favicon.ico",
+              "apps/user/src/assets"
+            ],
+            "styles": [
+              "apps/user/src/styles.scss"
+            ],
             "scripts": [],
             "customWebpackConfig": {
               "path": "apps/user/webpack.config.js"
@@ -381,13 +393,16 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/user"],
+          "outputs": [
+            "coverage/apps/user"
+          ],
           "options": {
             "jestConfig": "apps/user/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "user-e2e": {
       "root": "apps/user-e2e",
@@ -408,12 +423,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/user-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/user-e2e/**/*.{js,ts}"
+            ]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": [
+        "user"
+      ]
     }
   }
 }
